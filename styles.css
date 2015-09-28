@@ -1,0 +1,24 @@
+body {
+    font-family: 'Courier', monospace;
+}
+
+canvas {
+    background: #000;
+}
+
+a, a:hover, a:visited {
+    color: blue;
+}
+
+.main-wrapper {
+    width: 512px;
+    margin: 0 auto;
+}
+
+.main-header, .main-footer {
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
