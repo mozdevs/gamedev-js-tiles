@@ -19,19 +19,12 @@ var map = {
 
 Game.load = function () {
     return [
-        Loader.loadImage('grass', '../assets/grass.png'),
-        Loader.loadImage('sand', '../assets/sand.png'),
-        Loader.loadImage('tree', '../assets/tree.png'),
+        Loader.loadImage('tiles', '../assets/tiles.png')
     ];
 };
 
 Game.init = function () {
-    this.tileImages = [
-        null,
-        Loader.getImage('grass'),
-        Loader.getImage('sand'),
-        Loader.getImage('tree')
-    ];
+    this.tileAtlas = Loader.getImage('tiles');
 };
 
 Game.update = function (delta) {
@@ -41,8 +34,18 @@ Game.render = function () {
     for (var c = 0; c < map.cols; c++) {
         for (var r = 0; r < map.rows; r++) {
             var tile = map.getTile(c, r);
-            if (this.tileImages[tile] !== null) {
-                this.ctx.drawImage(this.tileImages[tile], c * map.tsize, r * map.tsize);
+            if (tile !== 0) { // 0 => empty tile
+                this.ctx.drawImage(
+                    this.tileAtlas, // image
+                    (tile - 1) * map.tsize, // source x
+                    0, // source y
+                    map.tsize, // source width
+                    map.tsize, // source height
+                    c * map.tsize,  // target x
+                    r * map.tsize, // target y
+                    map.tsize, // target width
+                    map.tsize // target height
+                    );
             }
         }
     }
