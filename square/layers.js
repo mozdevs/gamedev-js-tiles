@@ -28,18 +28,12 @@ var map = {
 
 Game.load = function () {
     return [
-        Loader.loadImage('grass', '../assets/grass.png'),
-        Loader.loadImage('sand', '../assets/sand.png'),
-        Loader.loadImage('tree', '../assets/tree.png'),
-        Loader.loadImage('tree-top', '../assets/tree_top.png'),
-        Loader.loadImage('rock', '../assets/rock.png')
+        Loader.loadImage('tiles', '../assets/tiles.png')
     ];
 };
 
 Game.init = function () {
-    this.tileImages = ['grass', 'sand', 'tree', 'tree-top', 'rock']
-        .map(Loader.getImage.bind(Loader));
-    this.tileImages.unshift(null); // 0 => no tile
+    this.tileAtlas = Loader.getImage('tiles');
 };
 
 Game.update = function (delta) {
@@ -49,10 +43,18 @@ Game._drawLayer = function (layer) {
     for (var c = 0; c < map.cols; c++) {
         for (var r = 0; r < map.rows; r++) {
             var tile = map.getTile(layer, c, r);
-            if (this.tileImages[tile] !== null) {
-                this.ctx.drawImage(this.tileImages[tile],
-                                   c * map.tsize,
-                                   r * map.tsize);
+            if (tile !== 0) { // 0 => empty tile
+                this.ctx.drawImage(
+                    this.tileAtlas, // image
+                    (tile - 1) * map.tsize, // source x
+                    0, // source y
+                    map.tsize, // source width
+                    map.tsize, // source height
+                    c * map.tsize,  // target x
+                    r * map.tsize, // target y
+                    map.tsize, // target width
+                    map.tsize // target height
+                );
             }
         }
     }
