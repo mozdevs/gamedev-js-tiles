@@ -22,3 +22,15 @@ a, a:hover, a:visited {
 .subtitle {
     font-size: 1.5em;
 }
+
+.main-header {
+    margin-bottom: 2em;
+}
+
+.main-footer {
+    margin-top: 2em;
+}
+
+li, p {
+    line-height: 1.2em;
+}
