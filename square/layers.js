@@ -28,15 +28,14 @@ var map = {
 
 Game.load = function () {
     return [
-        Loader.loadImage('tiles', '../assets/tiles.png')
+        Loader.loadImage('tiles', '../assets/tiles.png'),
+        Loader.loadImage('character', '../assets/character.png')
     ];
 };
 
 Game.init = function () {
     this.tileAtlas = Loader.getImage('tiles');
-};
-
-Game.update = function (delta) {
+    this.hero = {x: 128, y: 384, image: Loader.getImage('character')};
 };
 
 Game._drawLayer = function (layer) {
@@ -61,7 +60,10 @@ Game._drawLayer = function (layer) {
 };
 
 Game.render = function () {
-    for (var layer = 0; layer < map.layers.length; layer++) {
-        this._drawLayer(layer);
-    }
+    // draw map background layer
+    this._drawLayer(0);
+    // draw game sprites
+    this.ctx.drawImage(this.hero.image, this.hero.x, this.hero.y);
+    // draw map top layer
+    this._drawLayer(1);
 };
