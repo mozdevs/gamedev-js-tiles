@@ -1,6 +1,6 @@
 # JS Game development examples - Tilemaps
 
-This is a collection of examples on how to implement and use tilemaps in HTML 5 games.
+This is a collection of examples on how to implement and use tilemaps in HTML 5 games. You can take a look at these examples [live](https://mozdevs.github.io/gamedev-js-tiles).
 
 To see their companion articles and tutorials, go to [Tilemaps in the MDN](https://developer.mozilla.org/en-US/docs/Games/Techniques/Tilemaps).
 
