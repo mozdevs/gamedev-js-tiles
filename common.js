@@ -93,6 +93,9 @@ Game.run = function (context) {
 Game.tick = function (elapsed) {
     window.requestAnimationFrame(this.tick);
 
+    // clear previous frame
+    this.ctx.clearRect(0, 0, 512, 512);
+
     // compute delta time in seconds -- also cap it
     var delta = (elapsed - this._previousElapsed) / 1000.0;
     delta = Math.min(delta, 0.25); // maximum delta of 250 ms
