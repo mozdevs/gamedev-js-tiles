@@ -99,8 +99,8 @@ Game._drawLayer = function (layer) {
                     0, // source y
                     map.tsize, // source width
                     map.tsize, // source height
-                    x,  // target x
-                    y, // target y
+                    Math.round(x),  // target x
+                    Math.round(y), // target y
                     map.tsize, // target width
                     map.tsize // target height
                 );
