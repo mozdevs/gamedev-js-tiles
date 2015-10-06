@@ -10,7 +10,7 @@ var map = {
         1, 1, 1, 2, 1, 1, 1, 1,
         1, 1, 1, 1, 2, 1, 1, 1,
         1, 1, 1, 1, 2, 1, 1, 1,
-        1, 1, 1, 0, 0, 1, 1, 1
+        1, 1, 1, 1, 2, 1, 1, 1
     ],
     getTile: function (col, row) {
         return this.tiles[row * map.cols + col]
