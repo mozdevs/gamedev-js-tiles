@@ -30,7 +30,7 @@ var map = {
         4, 4, 4, 0, 0, 3, 3, 3, 3, 3, 3, 3
     ]],
     getTile: function (layer, col, row) {
-        return this.layers[layer][row * map.cols + col]
+        return this.layers[layer][row * map.cols + col];
     }
 };
 
