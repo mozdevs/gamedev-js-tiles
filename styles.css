@@ -1,5 +1,6 @@
 body {
-    font-family: 'Courier', monospace;
+    font-family: 'Source Code Pro', 'Courier', monospace;
+    margin: 0;
 }
 
 canvas {
@@ -7,11 +8,22 @@ canvas {
 }
 
 a, a:hover, a:visited {
-    color: blue;
+    color: #000;
+    text-decoration: none;
+}
+
+a {
+    border-bottom: 2px solid #31ffd5;
+}
+
+a:hover {
+    background:#31ffd5;
 }
 
 .main-wrapper {
     width: 512px;
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0 auto;
 }
 
@@ -24,7 +36,19 @@ a, a:hover, a:visited {
 }
 
 .main-header {
+    margin-top: 0;
     margin-bottom: 2em;
+}
+
+.main-header h1 {
+    margin: 0;
+    background: #31ffd5;
+    padding: 0.5em 1em;
+}
+
+.main-header a {
+    color: #000;
+    text-decoration: none;
 }
 
 .main-footer {
@@ -32,5 +56,9 @@ a, a:hover, a:visited {
 }
 
 li, p {
-    line-height: 1.2em;
+    line-height: 1.25em;
+}
+
+li {
+    margin: 0.5em 0;
 }
