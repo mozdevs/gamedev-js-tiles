@@ -1,0 +1,12 @@
+{ "columns":5,
+ "image":"..\/assets\/tiles.png",
+ "imageheight":64,
+ "imagewidth":320,
+ "margin":0,
+ "name":"tiles",
+ "spacing":0,
+ "tilecount":5,
+ "tileheight":64,
+ "tilewidth":64,
+ "transparentcolor":"#ffffff"
+}

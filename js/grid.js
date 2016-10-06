@@ -3,7 +3,7 @@ var map = {
     rows: 12,
     tsize: 64,
     layers: [[
-        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3, 3, 2, 2, 3, 3, 3, 3, 3, 3, 3,
         3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3,
         3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3,
         3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3,
@@ -16,7 +16,7 @@ var map = {
         3, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 3,
         3, 3, 3, 1, 1, 2, 3, 3, 3, 3, 3, 3
     ], [
-        4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4,
+        4, 3, 3, 5, 5, 3, 3, 3, 3, 3, 3, 4,
         4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         4, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 4,
@@ -165,7 +165,7 @@ Hero.prototype._collide = function (dirx, diry) {
 
 Game.load = function () {
     return [
-        Loader.loadImage('tiles', '../assets/tiles.png'),
+        Loader.loadImage('tiles', '../assets/maps/map0000.png'),
         Loader.loadImage('hero', '../assets/character.png')
     ];
 };
@@ -260,3 +260,7 @@ Game.render = function () {
 
     this._drawGrid();
 };
+
+///
+
+document.addEventListener("click", printMousePos);

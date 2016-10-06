@@ -1,6 +1,14 @@
 body {
     font-family: 'Source Code Pro', 'Courier', monospace;
-    margin: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  background: #000;
+  background-image: linear-gradient( to bottom, rgba(0, 0, 0, .5), rgba(0, 9, 71, .5), rgba(28, 0, 54, .5)), url('http://i.imgur.com/g8gmGHq.jpg');
+  background-size: auto, 100% auto;
+  height: 100%;
+  width: 100%;
 }
 
 canvas {
@@ -42,8 +50,10 @@ a:hover {
 
 .main-header h1 {
     margin: 0;
-    background: #31ffd5;
+    background: #000000;
+    border-bottom: 1px solid #222;
     padding: 0.5em 1em;
+    color:white;
 }
 
 .main-header a {
@@ -61,4 +71,13 @@ li, p {
 
 li {
     margin: 0.5em 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+section {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
