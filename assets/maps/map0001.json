@@ -1,0 +1,12 @@
+{ "columns":16,
+ "image":"..\/..\/..\/..\/imgs\/sprites\/tiles_tiny_sample.png",
+ "imageheight":192,
+ "imagewidth":512,
+ "margin":0,
+ "name":"tiles_tiny_sample",
+ "spacing":0,
+ "tilecount":96,
+ "tileheight":32,
+ "tilewidth":32,
+ "transparentcolor":"#ffffff"
+}

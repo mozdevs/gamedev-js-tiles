@@ -56,6 +56,16 @@ a:hover {
     color:white;
 }
 
+.main-header h2 {
+    margin: 0;
+    background: #000000;
+    border-bottom: 1px solid #222;
+    padding: 0.5em 1em;
+    display:inline-block;
+    color:white;
+    font-size:1em;
+}
+
 .main-header a {
     color: #000;
     text-decoration: none;
