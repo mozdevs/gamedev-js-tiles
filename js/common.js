@@ -115,6 +115,6 @@ Game.render = function () {};
 //
 
 window.onload = function () {
-    var context = document.getElementById('demo').getContext('2d');
+    var context = document.getElementById('pukey').getContext('2d');
     Game.run(context);
 };
