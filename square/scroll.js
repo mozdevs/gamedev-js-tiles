@@ -84,8 +84,8 @@ Game._drawLayer = function (layer) {
     var endCol = startCol + (this.camera.width / map.tsize);
     var startRow = Math.floor(this.camera.y / map.tsize);
     var endRow = startRow + (this.camera.height / map.tsize);
-    var offsetX = -this.camera.x + startCol * map.tsize;
-    var offsetY = -this.camera.y + startRow * map.tsize;
+    var offsetX = Math.round( -this.camera.x + startCol * map.tsize );
+    var offsetY = Math.round( -this.camera.y + startRow * map.tsize );
 
     for (var c = startCol; c <= endCol; c++) {
         for (var r = startRow; r <= endRow; r++) {
